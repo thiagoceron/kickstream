@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# insert_dynamodb.py — Insere os 12 jogos na tabela kickstream-jogos
-# Rode na EC2 com: python3 insert_dynamodb.py
-
 import boto3
 from decimal import Decimal
 
@@ -119,11 +115,10 @@ jogos = [
     },
 ]
 
-print("Inserindo jogos na tabela kickstream-jogos...")
+print("Inserindo jogos na tabela kickstream-jogos")
 for jogo in jogos:
-    # Remove campos None para o DynamoDB
     item = {k: v for k, v in jogo.items() if v is not None}
     table.put_item(Item=item)
-    print(f"  ✅ {item['jogoId']} — {item['titulo']}")
+    print(f"  {item['jogoId']} — {item['titulo']}")
 
-print("\nTodos os 12 jogos inseridos com sucesso!")
+print("\nTodos os 12 jogos inseridos com sucesso")
