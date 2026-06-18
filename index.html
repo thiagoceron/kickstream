@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KickStream – Futebol ao Vivo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">⚽ KickStream</a>
+      <nav>
+        <a href="index.html" class="active">Catálogo</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>O futebol brasileiro<br>que você não via em lugar nenhum.</h1>
+    <p>Clássicos estaduais, regionais e eliminatórias — tudo em um só lugar.</p>
+  </section>
+
+  <main class="container">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="Disponível">Disponível</button>
+      <button class="filter-btn" data-filter="Ao Vivo">Ao Vivo</button>
+      <button class="filter-btn" data-filter="Em Breve">Em Breve</button>
+
+      <select id="campeonato-filter">
+        <option value="">Todos os campeonatos</option>
+      </select>
+    </div>
+
+    <div id="loading" class="loading">Carregando jogos...</div>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <p>🎬 Este jogo está disponível para reprodução.</p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn-watch-modal">Assistir no YouTube ↗</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 KickStream · Todos os direitos reservados</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

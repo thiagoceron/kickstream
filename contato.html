@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato – KickStream</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">⚽ KickStream</a>
+      <nav>
+        <a href="index.html">Catálogo</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html" class="active">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <h2>Fale com a KickStream</h2>
+    <p>Dúvidas, sugestões ou problemas com alguma transmissão? Nos mande uma mensagem.</p>
+
+    <div class="form-card">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Seu nome completo" />
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="seu@email.com" />
+      </div>
+      <div class="form-group">
+        <label for="assunto">Assunto</label>
+        <select id="assunto">
+          <option>Problema técnico</option>
+          <option>Sugestão de jogo</option>
+          <option>Parceria comercial</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="5" placeholder="Descreva sua mensagem..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="enviarForm()">Enviar mensagem</button>
+      <p id="form-msg" style="display:none; color:#4ade80; margin-top:1rem;">✅ Mensagem enviada com sucesso!</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 KickStream · Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function enviarForm() {
+      document.getElementById('form-msg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
